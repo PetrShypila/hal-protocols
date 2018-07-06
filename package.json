@@ -1,0 +1,16 @@
+{
+  "name": "alfred-protocols",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "typings": "./dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Petr Shypila",
+  "license": "ISC",
+  "devDependencies": {
+    "tslint": "^5.10.0",
+    "typescript": "^2.9.2"
+  }
+}
