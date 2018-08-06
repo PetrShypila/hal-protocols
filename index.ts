@@ -1,4 +1,4 @@
-declare module "alfred-protocols" {
+declare module "hal-protocols" {
 
   export interface IApiUtterance {
     sessionId: string;
