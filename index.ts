@@ -1,28 +1,33 @@
 declare module "alfred-protocols" {
+
+  export interface IApiUtterance {
+    sessionId: string;
+    utterance: string;
+  }
+
+  export interface IApiNluOutput {
+    sessionId: string;
+    language: Languages;
+    intents: IIntent[];
+  }
+
+  export interface IIntent {
+    name: string;
+    value: string[];
+  }
+
+  export interface IApiManagerOutput {
+    language: Languages;
+    sessionId: string;
+    expect: string;
+    expectationCount: number;
+    received: IDialogScriptParamState[];
+  }
   export type Languages = "english" | "german";
 
   export interface IScript {
     defaultLang: Languages;
     scripts: IDialogScript[];
-  }
-
-  export interface IUserRequest {
-    sessionId: string;
-    language: Languages;
-    parameters: IInputParam[];
-  }
-
-  export interface IUserReply {
-    language: Languages;
-    sessionId: string;
-    expected: string;
-    expectationCount: number;
-    received: IDialogScriptParamState[];
-  }
-
-  export interface IInputParam {
-    name: string;
-    value: string;
   }
 
   export interface IDialogScript {
@@ -36,6 +41,7 @@ declare module "alfred-protocols" {
 
   export interface IDialogScriptParamState extends IDialogScriptParam {
     requestCount: number;
+    value: string[];
   }
 
 }

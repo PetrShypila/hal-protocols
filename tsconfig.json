@@ -8,6 +8,11 @@
     "strict": true
   },
   "files": [
-    "./index.d.ts"
+    "./index.ts"
+  ],
+  "exclude": [
+    "./.idea",
+    "./node_modules",
+    "./.git"
   ]
 }
